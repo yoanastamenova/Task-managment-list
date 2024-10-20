@@ -6,9 +6,11 @@ import { Component, EventEmitter, Input, Output, output } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-@Input({ required: true }) id!: string;
- @Input({required: true}) avatar!: string;
- @Input({required: true}) name!: string;
+@Input({ required: true }) user!: {
+  id: string;
+  name: string;
+  avatar: string;
+}
  @Output() select = new EventEmitter();     //EventEmiter object allows us to emit custom values throught that select property we issued
 // select = output<string>();              //using generic type again
 
