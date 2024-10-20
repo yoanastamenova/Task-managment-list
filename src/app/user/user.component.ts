@@ -9,8 +9,8 @@ export class UserComponent {
 @Input({ required: true }) id!: string;
  @Input({required: true}) avatar!: string;
  @Input({required: true}) name!: string;
-//  @Output() select = new EventEmitter();     //EventEmiter object allows us to emit custom values throught that select property we issued
-select = output<string>();              //using generic type again
+ @Output() select = new EventEmitter();     //EventEmiter object allows us to emit custom values throught that select property we issued
+// select = output<string>();              //using generic type again
 
  get imagePath() {
   return 'assets/users/' + this.avatar;
