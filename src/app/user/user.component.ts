@@ -8,6 +8,7 @@ import { type User } from './user.model';
 })
 export class UserComponent {
 @Input({ required: true }) user!: User;
+@Input({ required: true}) selected!: boolean;
  @Output() select = new EventEmitter();     //EventEmiter object allows us to emit custom values throught that select property we issued
 // select = output<string>();              //using generic type again
 
